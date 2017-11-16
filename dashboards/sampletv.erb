@@ -1,0 +1,55 @@
+<script type='text/javascript'>
+$(function() {
+  // These settings override the defaults set in application.coffee. You can do this on a per dashboard basis.
+  Dashing.gridsterLayout('[{"col":2,"row":1,"size_x":1,"size_y":1},{"col":1,"row":1,"size_x":1,"size_y":1},{"col":4,"row":3,"size_x":1,"size_y":1},{"col":4,"row":2,"size_x":1,"size_y":1},{"col":3,"row":2,"size_x":1,"size_y":1},{"col":2,"row":3,"size_x":1,"size_y":1},{"col":2,"row":2,"size_x":1,"size_y":1},{"col":3,"row":3,"size_x":1,"size_y":1},{"col":1,"row":2,"size_x":1,"size_y":2},{"col":3,"row":1,"size_x":1,"size_y":1},{"col":4,"row":1,"size_x":1,"size_y":1}]')
+  Dashing.widget_base_dimensions = [370, 340]
+  Dashing.numColumns = 5
+});
+</script>
+
+
+<% content_for :title do %>1080p dashboard<% end %>
+
+<div class="gridster">
+  <ul>
+    <li data-row="1" data-col="1" data-sizex="1" data-sizey="1">
+      <div data-id="clock" data-view="Clock" data-second-time-offset="+4.5"></div>
+      <i class="fa fa-clock-o icon-background"></i>
+    </li>
+
+    <li data-row="1" data-col="1" data-sizex="1" data-sizey="1">
+      <div data-view="Image" data-image="/logoelhub2.png"></div>
+    </li>
+    <li data-row="1" data-col="1" data-sizex="1" data-sizey="1">
+      <div data-id="welcome" data-view="Text" data-title="Hello!" data-text="Know javascript and have suggestions to the dashboard? Contact Christian" data-$
+    </li>
+
+    <li data-row="1" data-col="1" data-sizex="1" data-sizey="1">
+      <div data-id="filterabdefects" data-view="Number" data-title="Open A/B Defects"></div>
+   </li>
+   <li data-row="1" data-col="1" data-sizex="1" data-sizey="1">
+      <div data-id="filterperformancedefects" data-view="Number" data-title="Performance Defects"></div>
+   </li>
+   <li data-row="1" data-col="1" data-sizex="1" data-sizey="1">
+      <div data-id="filterdocumentationtasks" data-view="Number" data-title="Documentation tasks"></div>
+   </li>
+   <li data-row="1" data-col="1" data-sizex="1" data-sizey="1">
+      <div data-id="filterdefectstoday" data-view="Number" data-title="Defects solved today"></div>
+   </li>
+
+   <li data-row="1" data-col="1" data-sizex="1" data-sizey="1">
+      <div data-id="sonar" data-view="List" data-title="sonar stats" data-unordered="true" data-moreinfo="values as %">
+      </div>
+   </li>
+   <li data-row="1" data-col="1" data-sizex="1" data-sizey="2">
+    <div data-id="a_timeline" data-view="Timeline" data-title="Timeline"></div>
+   </li>
+   <li data-row="1" data-col="1" data-sizex="1" data-sizey="1">
+      <div data-id="uat_status" data-view="Alert" data-addclass-danger="isTooHigh" data-title="UAT Environment status"></div>
+    </li>
+    <li data-row="1" data-col="1" data-sizex="1" data-sizey="1">
+      <div data-id="svt_status" data-view="Alert" data-addclass-danger="isTooHigh" data-title="SVT Environment status"></div>
+    </li>
+ 
+ </ul>
+</div>
