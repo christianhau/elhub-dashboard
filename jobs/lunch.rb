@@ -11,7 +11,7 @@ SCHEDULER.every '1h', :first_in => 0 do |job|
       today = [today]
     end
 
-    dishes = today.join('\n')
+    dishes = today.join('<br>')
 
     send_event('lunch', { text: dishes })
 end
