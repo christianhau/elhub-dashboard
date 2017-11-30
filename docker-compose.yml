@@ -1,0 +1,17 @@
+version: '2'
+
+services:
+  smashing:
+    image: rgcamus/alpine_smashing
+    restart: always
+    container_name: elhub-dashboard
+    volumes:
+      - ./dashboards:/dashboards
+      - ./jobs:/jobs
+      - ./lib-smashing:/lib-smashing
+      #- ./config:/config
+      - ./public:/public
+      - ./widgets:/widgets
+      - ./assets:/assets
+    ports:
+      - 8080:3030
